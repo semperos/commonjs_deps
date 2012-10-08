@@ -1,0 +1,1 @@
+Baz = require 'nested/baz'

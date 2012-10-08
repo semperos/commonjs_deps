@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+if ARGV.count < 2
+  puts "Usage: commonjs_dep_tree <directory> <output_file_name>"
+  exit 1
+end
+
+require 'commonjs_deps'
+CommonjsDeps.main
