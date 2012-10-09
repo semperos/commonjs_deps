@@ -1,29 +1,12 @@
-# CommonjsDeps
+# CommonJS Deps
 
-TODO: Write a gem description
+This gem installs a single binary `commonjs_dep_tree` which takes as parameters a directory to analyze and the name of an output SVG file. You must have GraphViz installed for this gem to work.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'commonjs_deps'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install commonjs_deps
+This gem isn't on a public server. Pull down the code, run `gem build commonjs_deps.gemspec` and then `gem install commonjs_deps-x.x.x.gem`.
 
 ## Usage
 
-TODO: Write usage instructions here
+`commonjs_dep_tree <directory> <output-file-name>`
 
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
