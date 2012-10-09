@@ -121,7 +121,13 @@ module CommonjsDeps
     end
 
     def self.output_graph(graph, output_file, output_type)
-      graph.output( output_type => output_file)
+      if output_type == :graphml
+        g = CommonjsDeps::Render::Graphml.new(graph)
+        g.build_document
+        File.open(output_file, 'w') { |f| f.write(g.output_xml) }
+      else
+        graph.output( output_type => output_file )
+      end
     end
   end
 end

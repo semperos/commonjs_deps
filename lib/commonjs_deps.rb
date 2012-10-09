@@ -1,12 +1,14 @@
 require 'commonjs_deps/version'
 
 require 'graphviz'
+require 'nokogiri'
 require 'mixlib/cli'
 require 'ruby-progressbar'
 require 'pathname'
 require 'pp'
 
-require 'commonjs_deps/graph.rb'
+require 'commonjs_deps/graph'
+require 'commonjs_deps/render/graphml'
 
 module CommonjsDeps
   class Cli
