@@ -108,7 +108,10 @@ module CommonjsDeps
         # We'll say parsing the files is half the work,
         # then building the node datastructure is the second half
         progress_total = files.count * 2
-        @@progress_bar = ProgressBar.create(:starting_at => 0, :total => progress_total)
+        @@progress_bar = ProgressBar
+          .create({:starting_at => 0,
+                   :total => progress_total,
+                    :format => "%t (%p%%): |%B|"})
         files.each do |f|
           add_file_entry tree, working_dir, f
           @@progress_bar.increment

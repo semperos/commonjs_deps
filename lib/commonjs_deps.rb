@@ -9,7 +9,7 @@ require 'ruby-progressbar'
 require 'pathname'
 require 'pp'
 
-require_relative 'commonjs_deps/graph.rb'
+require 'commonjs_deps/graph.rb'
 
 module CommonjsDeps
   class Cli
@@ -54,7 +54,7 @@ module CommonjsDeps
     puts "Calculating dependency tree for '#{working_dir}'"
     g = CommonjsDeps::Graph
     graph = g::build_dependency_graph(working_dir, extensions)
-    puts "Writing graph to file: #{output_file}"
+    puts "Writing graph to file (#{output_file})..."
     g::output_graph(graph, output_file, output_type)
   end
 end
