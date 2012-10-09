@@ -16,6 +16,7 @@ Gem::Specification.new do |gem|
   gem.version       = CommonjsDeps::VERSION
   # Runtime Dependencies
   gem.add_dependency('ruby-graphviz', '~> 1.0.8')
+  gem.add_dependency('mixlib-cli', '1.2.2')
   gem.add_dependency('ruby-progressbar', '~> 1.0.2')
   # Development Dependencies
   gem.add_development_dependency('pry', '~> 0.9.10')
